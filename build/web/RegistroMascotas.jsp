@@ -16,9 +16,12 @@
         <title>Registrar Mascota</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/bootstrap-4.5.0-dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="css/sweetalert.css" rel="stylesheet"/>
+        <script src="js/sweetalert.min.js" type="text/javascript"/>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <title>Login APS</title>
+        
     </head>
     <body class="bg-dark">
         <div id="layoutAuthentication">
@@ -30,40 +33,40 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h1 class="text-center font-weight-light my-4">Registrar Mascota</h1></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="" method="POST">
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblIdMascota">Fecha registro</label>
-                                                        <input class="form-control py-2" name="txtIdentificacion" type="date" placeholder="Ingrese número de identificación" />
+                                                        <label class="small mb-1" for="lblFecha">Fecha registro</label>
+                                                        <input class="form-control py-2" name="txtFecha" type="date" placeholder="Ingrese número de identificación" required="" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="small mb-1" for="lblIdMascota">Id Mascota</label>
-                                                        <input class="form-control py-2" name="txtIdentificacion" type="text" placeholder="Ingrese número de identificación" />
+                                                        <input class="form-control py-2" name="txtIdMascota" type="text" placeholder="Ingrese número de identificación" required="" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="lblNombresEmailAddress">Nombre Mascota</label>
-                                                <input class="form-control py-2" name="txtNombres" type="text"  placeholder="Ingresar nombre de la Mascota" />
+                                                <label class="small mb-1" for="lblNombreMascota">Nombre Mascota</label>
+                                                <input class="form-control py-2" name="txtNombreMascota" type="text"  placeholder="Ingresar nombre de la Mascota" required="" />
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblSegundoApellido">Especie</label>
-                                                        <select class="form-control py-2" name="txtSegundoApellido" type="text" placeholder="Ingresar segundo apellido">
-                                                            <option>Seleccione</option>
-                                                            <option>Gato</option>
-                                                            <option>Perro</option>
+                                                        <label class="small mb-1" for="lblEspecie">Especie</label>
+                                                        <select class="form-control py-2" name="ddlEspecie" type="text" placeholder="Ingresar segundo apellido" required="">
+                                                            <option value="1">Seleccione</option>
+                                                            <option value="2">Gato</option>
+                                                            <option value="3">Perro</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblPrimerApellido">Raza</label>
-                                                        <input class="form-control py-2" name="txtPrimerApellido" type="text" placeholder="" />
+                                                        <label class="small mb-1" for="lblRaza">Raza</label>
+                                                        <input class="form-control py-2" name="txtRaza" type="text" placeholder="" required="" />
                                                     </div>
                                                 </div>
 
@@ -71,42 +74,42 @@
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblEmail">Sexo</label>
-                                                        <select class="form-control py-2" name="txtSegundoApellido" type="text" placeholder="Ingresar segundo apellido">
-                                                            <option>Seleccione</option>
-                                                            <option>Macho</option>
-                                                            <option>Hembra</option>
+                                                        <label class="small mb-1" for="lblSexo">Sexo</label>
+                                                        <select class="form-control py-2" name="ddlSexo" type="text" placeholder="Ingresar segundo apellido" required="">
+                                                            <option value="1">Seleccione</option>
+                                                            <option value="2">Macho</option>
+                                                            <option value="3">Hembra</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblTelefono">Edad</label>
-                                                        <input class="form-control py-2" name="txtTelefono" type="text" placeholder="Aproximada en años" />
+                                                        <label class="small mb-1" for="lblEdad">Edad</label>
+                                                        <input class="form-control py-2" name="txtEdad" type="text" placeholder="Aproximada en años" required=""/>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblContraseña">Peso</label>
-                                                        <input class="form-control py-2" name="txtContraseña" type="texto" placeholder="Ingresar peso en kilogramos" />
+                                                        <label class="small mb-1" for="lblPeso">Peso</label>
+                                                        <input class="form-control py-2" name="txtPeso" type="texto" placeholder="Ingresar peso en kilogramos" required=""/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="lblConfirmContraseña">Tamaño</label>
-                                                        <select class="form-control py-2" name="txtSegundoApellido" type="text" placeholder="Seleccionar tamaño">
-                                                            <option>Seleccione</option>
-                                                            <option>Pequeño</option>
-                                                            <option>Mediano</option>
-                                                            <option>Grande</option>
+                                                        <label class="small mb-1" for="lblTamaño">Tamaño</label>
+                                                        <select class="form-control py-2" name="ddlTamaño" type="text" placeholder="Seleccionar tamaño" required="">
+                                                            <option value="1">Seleccione</option>
+                                                            <option value="2">Pequeño</option>
+                                                            <option value="3">Mediano</option>
+                                                            <option value="4">Grande</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group mt-4 mb-0">
-                                                <input type="submit" class="btn btn-success btn-block" name="btnAceptar" href="#" values="Crear cuenta"/>
+                                                <input type="submit" class="btn btn-success btn-block" name="btnAceptar" href="#" values="Enviar"/>
                                             </div>
                                         </form>
                                     </div>
