@@ -27,7 +27,6 @@ public class clsEspecie {
     public void setStDescripcion(String stDescripcion) {
         this.stDescripcion = stDescripcion;
     }
-    public String stDescripcion;
     public int inCodigo;
-    
+    public String stDescripcion;
 }
