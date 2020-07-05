@@ -121,7 +121,7 @@ public class RegistroMascotaController extends HttpServlet {
             
             //Se agrega objeto a la lista
             lstclsRegistroMascotases.add(obclsRegistroMascotas);
-            session.getAttribute("session_lstclsRegistroMascotases", lstclsRegistroMascotases);
+            session.setAttribute("session_lstclsRegistroMascotases", lstclsRegistroMascotases);
             
             
                     
