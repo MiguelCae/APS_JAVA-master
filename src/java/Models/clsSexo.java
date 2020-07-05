@@ -10,8 +10,6 @@ package Models;
  * @author MIGUEL
  */
 public class clsSexo {
-    public int inCodigo;
-    public String stDescripcion;
 
     public int getInCodigo() {
         return inCodigo;
@@ -28,5 +26,7 @@ public class clsSexo {
     public void setStDescripcion(String stDescripcion) {
         this.stDescripcion = stDescripcion;
     }
-    
+    public int inCodigo;
+    public String stDescripcion;
+
 }

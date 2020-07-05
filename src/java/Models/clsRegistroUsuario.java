@@ -10,7 +10,7 @@ package Models;
  * @author MIGUEL
  */
 public class clsRegistroUsuario {
-    public String stIdentificacion;
+    
 
     public String getStIdentificacion() {
         return stIdentificacion;
@@ -75,6 +75,9 @@ public class clsRegistroUsuario {
     public void setStContraseña(String stContraseña) {
         this.stContraseña = stContraseña;
     }
+    
+    //Atributos o propiedades
+    public String stIdentificacion;
     public clsIdentificacion obIdentificacion;
     public String stNombres;
     public String stPrimerApellido;

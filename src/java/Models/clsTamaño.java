@@ -10,7 +10,7 @@ package Models;
  * @author MIGUEL
  */
 public class clsTamaño {
-    public int inCodigo;
+    
 
     public int getInCodigo() {
         return inCodigo;
@@ -28,6 +28,7 @@ public class clsTamaño {
         this.descripcion = descripcion;
     }
     public String descripcion;
+    public int inCodigo;
     
     
 }

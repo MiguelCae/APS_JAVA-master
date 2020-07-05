@@ -10,7 +10,7 @@ package Models;
  * @author MIGUEL
  */
 public class clsEspecie {
-    public int inCodigo;
+    
 
     public int getInCodigo() {
         return inCodigo;
@@ -28,5 +28,6 @@ public class clsEspecie {
         this.stDescripcion = stDescripcion;
     }
     public String stDescripcion;
+    public int inCodigo;
     
 }

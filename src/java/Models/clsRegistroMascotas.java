@@ -11,16 +11,7 @@ package Models;
  */
 public class clsRegistroMascotas {
     
-    public String stFecha;
-    public int inIdMascota;
-    public String stNombreMascota;
-    public String stRaza;
-    public int inEdad;
-    public int inPeso;
-    public clsEspecie obclsEspecie;
-    public clsSexo obclsSexo;
-    public clsTamaño obclsTamaño;
-
+    
     public String getStFecha() {
         return stFecha;
     }
@@ -92,6 +83,15 @@ public class clsRegistroMascotas {
     public void setObclsTamaño(clsTamaño obclsTamaño) {
         this.obclsTamaño = obclsTamaño;
     }
-    
+    public String stFecha;
+    public int inIdMascota;
+    public String stNombreMascota;
+    public String stRaza;
+    public int inEdad;
+    public int inPeso;
+    public clsEspecie obclsEspecie;
+    public clsSexo obclsSexo;
+    public clsTamaño obclsTamaño;
+
     
 }
