@@ -89,7 +89,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <div class=\"card shadow-lg border-0 rounded-lg mt-5\">\n");
       out.write("                                <div class=\"card-header\"><h3 class=\"text-center font-weight-light my-4\">Login</h3></div>\n");
       out.write("                                <div class=\"card-body\">\n");
-      out.write("                                    <form action=\"LoginControler\">\n");
+      out.write("                                    <form action=\"LoginControler\" method=\"POST\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"small mb-1\" for=\"lblEmail\">Email</label>\n");
       out.write("                                            <input class=\"form-control py-4\" name = \"txtEmail\" type=\"email\" placeholder=\"Ingresar Email\" />\n");
