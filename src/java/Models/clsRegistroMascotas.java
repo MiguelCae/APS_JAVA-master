@@ -10,8 +10,7 @@ package Models;
  * @author MIGUEL
  */
 public class clsRegistroMascotas {
-    
-    
+
     public String getStFecha() {
         return stFecha;
     }
@@ -44,22 +43,6 @@ public class clsRegistroMascotas {
         this.stRaza = stRaza;
     }
 
-    public int getInEdad() {
-        return inEdad;
-    }
-
-    public void setInEdad(int inEdad) {
-        this.inEdad = inEdad;
-    }
-
-    public int getInPeso() {
-        return inPeso;
-    }
-
-    public void setInPeso(int inPeso) {
-        this.inPeso = inPeso;
-    }
-
     public clsEspecie getObclsEspecie() {
         return obclsEspecie;
     }
@@ -83,15 +66,49 @@ public class clsRegistroMascotas {
     public void setObclsTamaño(clsTamaño obclsTamaño) {
         this.obclsTamaño = obclsTamaño;
     }
+
+    public String getStEdad() {
+        return stEdad;
+    }
+
+    public void setStEdad(String stEdad) {
+        this.stEdad = stEdad;
+    }
+
+    public String getStPeso() {
+        return stPeso;
+    }
+
+    public void setStPeso(String stPeso) {
+        this.stPeso = stPeso;
+    }
+    
+
+    public int getInCodigo() {
+        return inCodigo;
+    }
+
+    public void setInCodigo(int inCodigo) {
+        this.inCodigo = inCodigo;
+    }
+    public int inCodigo;
     public String stFecha;
     public int inIdMascota;
     public String stNombreMascota;
     public String stRaza;
-    public int inEdad;
-    public int inPeso;
+    public String stEdad;
+    public String stPeso;
     public clsEspecie obclsEspecie;
     public clsSexo obclsSexo;
     public clsTamaño obclsTamaño;
 
-    
+    //Estar pendiente de estos dos metodo que se generaron automaticamente squiza  puen generar error con sultar https://www.youtube.com/watch?v=_y8TpZyY2IE
+    public void setInIdMascota(String txtIdMascota) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setStDescripcion(String stDescripcion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
