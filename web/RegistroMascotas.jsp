@@ -33,7 +33,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h1 class="text-center font-weight-light my-4">Registrar Mascota</h1></div>
                                     <div class="card-body">
-                                        <form action="" method="POST">
+                                        <form action="RegistroMascotaController" method="POST">
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
