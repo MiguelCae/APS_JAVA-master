@@ -41,12 +41,11 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="small mb-1" for="lblTipoIdentificacion">Seleccione identificación</label>
-                                                        <select class="form-control py-2" name="txtIdentificacion">
+                                                        <select class="form-control py-2" name="ddlTipoIdentificacion">
                                                             <option value="1">Seleccione</option> 
-                                                            <option value="3">Cédula de ciudadanía</option> 
-                                                            <option value="3">Cédula de ciudadanía</option> 
-                                                            <option value="4">Cédula de extranjería</option>
-                                                            <option value="5">PA - Pasaporte</option>
+                                                            <option value="2">Cedula de ciudadan1a</option> 
+                                                            <option value="3">Cedula de extranjeria</option>
+                                                            <option value="4">Pasaporte</option>
                                                         </select>
                                                     </div>
                                                 </div>

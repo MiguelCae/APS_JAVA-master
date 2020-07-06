@@ -71,7 +71,7 @@ public class RegistroMascotaController extends HttpServlet {
                 
                 }else if(request.getParameter("ddlEspecie").equals("2")){
                     stDescripcion = "Gato";
-                }else if(request.getParameter("ddlEspecie").equals("4")){
+                }else if(request.getParameter("ddlEspecie").equals("3")){
                     stDescripcion = "Perro";
                 }
                 
@@ -106,27 +106,27 @@ public class RegistroMascotaController extends HttpServlet {
             
             
             //Lista de objetos que se van creando de los nuevos registros 
-            List<Models.clsRegistroMascotas> lstclsRegistroMascotases = new ArrayList<Models.clsRegistroMascotas>();
+            List<Models.clsRegistroMascotas> lstclsRegistroMascotas = new ArrayList<Models.clsRegistroMascotas>();
             
             // se valida previa existencia de variable de session
-            if(session.getAttribute("session_lstclsRegistroMascotases")!= null){
-                lstclsRegistroMascotases = (List<Models.clsRegistroMascotas>) 
-                        session.getAttribute("session_lstclsRegistroMascotases");
+            if(session.getAttribute("session_lstclsRegistroMascotas")!= null){
+                lstclsRegistroMascotas = (List<Models.clsRegistroMascotas>) 
+                        session.getAttribute("session_lstclsRegistroMascotas");
             
             }
             //Calculo codigo que identifica registro
-            int inCodigo = lstclsRegistroMascotases.size() + 1;
+            int inCodigo = lstclsRegistroMascotas.size() + 1;
             obclsRegistroMascotas.setInCodigo(inCodigo);
             
             
             //Se agrega objeto a la lista
-            lstclsRegistroMascotases.add(obclsRegistroMascotas);
-            session.setAttribute("session_lstclsRegistroMascotases", lstclsRegistroMascotases);
+            lstclsRegistroMascotas.add(obclsRegistroMascotas);
+            session.setAttribute("session_lstclsRegistroMascotases", lstclsRegistroMascotas);
             
             
                     
            // Definir parametros  desde el controlador
-           request.setAttribute("stMensaje", "Se realizao proceso con exito");
+           request.setAttribute("stMensaje", "Se realizo proceso con exito");
            request.setAttribute("stTipo", "succes");
            //Redireccion del formulario
            

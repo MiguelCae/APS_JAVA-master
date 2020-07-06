@@ -10,7 +10,6 @@ package Models;
  * @author MIGUEL
  */
 public class clsRegistroUsuario {
-    
 
     public String getStIdentificacion() {
         return stIdentificacion;
@@ -75,8 +74,17 @@ public class clsRegistroUsuario {
     public void setStContraseña(String stContraseña) {
         this.stContraseña = stContraseña;
     }
-    
+
+    public int getInCodigo() {
+        return inCodigo;
+    }
+
+    public void setInCodigo(int inCodigo) {
+        this.inCodigo = inCodigo;
+    }
+
     //Atributos o propiedades
+    public int inCodigo;
     public String stIdentificacion;
     public clsIdentificacion obIdentificacion;
     public String stNombres;
@@ -85,7 +93,9 @@ public class clsRegistroUsuario {
     public String stCorreo;
     public String stTelefono;
     public String stContraseña;
-    
-    
-    
+
+    public void setStDescription(String stDescripcion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
