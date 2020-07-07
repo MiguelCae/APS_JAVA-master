@@ -38,20 +38,25 @@
                 lstclsRegistroMascotas = (List<Models.clsRegistroMascotas>) session.getAttribute("session_lstclsRegistroMascotases");
             }
             
-            if (request.getAttribute("stMensaje") != null
-                    && request.getAttribute("stTipo") != null) {
+            if ((request.getAttribute("stMensaje")) != null
+                    && (request.getAttribute("stTipo")) != null) {
 
         %>
-        <input type="text" hidden="" id="txtMensaje"
-               value="<%= (request.getAttribute("stMensaje")%>"/>
-        <input type="text" hidden="" id="txtTipo"
-               value="<%= (request.getAttribute("stTipo")%>"/>
+        <input type="text" hidden id="txtMensaje"
+               value="<%= request.getAttribute("stMensaje") %>"/>
+        
+        <input type="text" hidden id="txtTipo"
+               value="<%= request.getAttribute("stTipo") %>"/>
+        
         <script>
             var mensaje = document.getElementById("txtMensaje").value;
-            var tipo    = document.getElementById("txtTipo").value;
+            var tipo = document.getElementById("txtTipo").value;
+            
             swal("Mensaje",mensaje,tipo);
             
         </script>
+            
+        
         <%
             }
         %>

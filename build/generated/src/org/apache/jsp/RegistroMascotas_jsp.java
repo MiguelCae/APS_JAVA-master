@@ -80,25 +80,30 @@ public final class RegistroMascotas_jsp extends org.apache.jasper.runtime.HttpJs
                 lstclsRegistroMascotas = (List<Models.clsRegistroMascotas>) session.getAttribute("session_lstclsRegistroMascotases");
             }
             
-            if (request.getAttribute("stMensaje") != null
-                    && request.getAttribute("stTipo") != null) {
+            if ((request.getAttribute("stMensaje")) != null
+                    && (request.getAttribute("stTipo")) != null) {
 
         
       out.write("\n");
-      out.write("        <input type=\"text\" hidden=\"\" id=\"txtMensaje\"\n");
+      out.write("        <input type=\"text\" hidden id=\"txtMensaje\"\n");
       out.write("               value=\"");
-      out.print( (request.getAttribute("stMensaje"));
+      out.print( request.getAttribute("stMensaje") );
       out.write("\"/>\n");
-      out.write("        <input type=\"text\" hidden=\"\" id=\"txtTipo\"\n");
+      out.write("        \n");
+      out.write("        <input type=\"text\" hidden id=\"txtTipo\"\n");
       out.write("               value=\"");
-      out.print( (request.getAttribute("stTipo"));
+      out.print( request.getAttribute("stTipo") );
       out.write("\"/>\n");
+      out.write("        \n");
       out.write("        <script>\n");
       out.write("            var mensaje = document.getElementById(\"txtMensaje\").value;\n");
-      out.write("            var tipo    = document.getElementById(\"txtTipo\").value;\n");
+      out.write("            var tipo = document.getElementById(\"txtTipo\").value;\n");
+      out.write("            \n");
       out.write("            swal(\"Mensaje\",mensaje,tipo);\n");
       out.write("            \n");
       out.write("        </script>\n");
+      out.write("            \n");
+      out.write("        \n");
       out.write("        ");
 
             }

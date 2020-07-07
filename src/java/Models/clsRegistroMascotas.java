@@ -18,15 +18,7 @@ public class clsRegistroMascotas {
     public void setStFecha(String stFecha) {
         this.stFecha = stFecha;
     }
-
-    public int getInIdMascota() {
-        return inIdMascota;
-    }
-
-    public void setInIdMascota(int inIdMascota) {
-        this.inIdMascota = inIdMascota;
-    }
-
+    
     public String getStNombreMascota() {
         return stNombreMascota;
     }
@@ -91,13 +83,31 @@ public class clsRegistroMascotas {
     public void setInCodigo(int inCodigo) {
         this.inCodigo = inCodigo;
     }
+    
+    public String stIdMascota;
+
+    public String getStIdMascota() {
+        return stIdMascota;
+    }
+
+    public void setStIdMascota(String stIdMascota) {
+        this.stIdMascota = stIdMascota;
+    }
+    
+    public String getStDescription() {
+        return stDescription;
+    }
+
+    public void setStDescription(String stDescription) {
+        this.stDescription = stDescription;
+    }
     public int inCodigo;
     public String stFecha;
-    public int inIdMascota;
     public String stNombreMascota;
     public String stRaza;
     public String stEdad;
     public String stPeso;
+    public String stDescription;
     public clsEspecie obclsEspecie;
     public clsSexo obclsSexo;
     public clsTamaño obclsTamaño;

@@ -54,7 +54,7 @@ public class RegistroMascotaController extends HttpServlet {
                 obclsRegistroMascotas.setStFecha("txtFecha");
             }
             if(request.getParameter("txtIdMascota") != null){
-                obclsRegistroMascotas.setInIdMascota("txtIdMascota");
+                obclsRegistroMascotas.setStIdMascota("txtIdMascota");
             }
             
             if(request.getParameter("txtNombreMascota")!= null){
@@ -75,7 +75,7 @@ public class RegistroMascotaController extends HttpServlet {
                     stDescripcion = "Perro";
                 }
                 
-                obclsRegistroMascotas.setStDescripcion(stDescripcion);
+                obclsEspecie.setStDescripcion(stDescripcion);
                 
                 obclsRegistroMascotas.setObclsEspecie(obclsEspecie);
             }
@@ -83,22 +83,37 @@ public class RegistroMascotaController extends HttpServlet {
                 obclsRegistroMascotas.setStRaza("txtRaza");
             }
             
-            if(request.getParameter("ddlTamaño") != null ){
+            if(request.getParameter("ddlTamaño")!= null){
+                
                 obclsTamaño.setInCodigo(Integer.parseInt(request.getParameter("ddlTamaño")));
+                
                 String stDescripcion = "";
                 
                 if(request.getParameter("ddlTamaño").equals("1")){
-                    stDescripcion = "Seleccione";
+                    stDescripcion ="Seleccione";
                 }else if(request.getParameter("ddlTamaño").equals("2")){
-                    stDescripcion = "Pequeño";
+                    stDescripcion ="Pequeño";
                 }else if(request.getParameter("ddlTamaño").equals("3")){
-                    stDescripcion = "Mediano";
+                    stDescripcion ="Mediano";
                 }else if(request.getParameter("ddlTamaño").equals("4")){
-                    stDescripcion = "Grande";
+                    stDescripcion ="Grande";
                 }
-                obclsRegistroMascotas.setStDescripcion(stDescripcion);
-                
+                obclsTamaño.setDescripcion(stDescripcion);
                 obclsRegistroMascotas.setObclsTamaño(obclsTamaño);
+            }
+            if(request.getParameter("ddlSexo") != null){
+                obclsSexo.setInCodigo(Integer.parseInt(request.getParameter("ddlSexo")));
+                String stDescripcion = "";
+                
+                if(request.getParameter("ddlSexo").equals("1")){
+                    stDescripcion = "Seleccione";
+                }else if(request.getParameter("ddlSexo").equals("2")){
+                    stDescripcion = "Macho";
+                }else if(request.getParameter("ddlSexo").equals("3")){
+                    stDescripcion = "Hembra";
+                }
+                obclsSexo.setStDescripcion(stDescripcion);
+                obclsRegistroMascotas.setObclsSexo(obclsSexo);
             }
             
             HttpSession session = request.getSession(true);
@@ -127,7 +142,7 @@ public class RegistroMascotaController extends HttpServlet {
                     
            // Definir parametros  desde el controlador
            request.setAttribute("stMensaje", "Se realizo proceso con exito");
-           request.setAttribute("stTipo", "succes");
+           request.setAttribute("stTipo", "success");
            //Redireccion del formulario
            
            request.getRequestDispatcher("RegistroMascotas.jsp").forward(request, response);
@@ -135,12 +150,12 @@ public class RegistroMascotaController extends HttpServlet {
         
         }catch (Exception ex){
             // Definir parametros  desde el controlador
-           request.setAttribute("stMensaje", "Se realizao proceso con exito");
+           request.setAttribute("stMensaje", "Completa todos los campos");
            request.setAttribute("stTipo", "error");
            //Redireccion del formulario
            
-           request.getRequestDispatcher("RegistroMascotas.jsp").forward(request, response);
-        
+                   request.getRequestDispatcher("RegistroMascotas.jsp").forward(request, response);
+
         }
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
