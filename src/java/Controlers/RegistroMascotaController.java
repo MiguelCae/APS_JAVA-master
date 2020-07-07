@@ -113,6 +113,7 @@ public class RegistroMascotaController extends HttpServlet {
                     stDescripcion = "Hembra";
                 }
                 obclsSexo.setStDescripcion(stDescripcion);
+
                 obclsRegistroMascotas.setObclsSexo(obclsSexo);
             }
             
