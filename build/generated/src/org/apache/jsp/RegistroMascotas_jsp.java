@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public final class RegistroMascotas_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,6 +46,8 @@ public final class RegistroMascotas_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -55,11 +59,51 @@ public final class RegistroMascotas_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        <title>Registrar Mascota</title>\n");
       out.write("        <link href=\"css/styles.css\" rel=\"stylesheet\" />\n");
       out.write("        <link href=\"css/bootstrap-4.5.0-dist/css/bootstrap.css\" rel=\"stylesheet\" />\n");
+      out.write("        <link href=\"css/sweetalert.css\" rel=\"stylesheet\"/>\n");
+      out.write("        <script src=\"js/sweetalert.min.js\" type=\"text/javascript\"/>\n");
       out.write("        <script src=\"https://unpkg.com/sweetalert/dist/sweetalert.min.js\"></script>\n");
       out.write("        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <title>Login APS</title>\n");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body class=\"bg-dark\">\n");
+      out.write("\n");
+      out.write("        ");
+
+            List<Models.clsRegistroMascotas> lstclsRegistroMascotas
+                    = new ArrayList<Models.clsRegistroMascotas>();
+
+            //Exiatencia de variable de session
+            if (session.getAttribute("session_lstclsRegistroMascotases") != null) {
+
+                //Casteo de la valiable con el objeto List(tipo de dato variable de sesion)
+                lstclsRegistroMascotas = (List<Models.clsRegistroMascotas>) session.getAttribute("session_lstclsRegistroMascotases");
+            }
+            
+            if (request.getAttribute("stMensaje") != null
+                    && request.getAttribute("stTipo") != null) {
+
+        
+      out.write("\n");
+      out.write("        <input type=\"text\" hidden=\"\" id=\"txtMensaje\"\n");
+      out.write("               value=\"");
+      out.print( (request.getAttribute("stMensaje"));
+      out.write("\"/>\n");
+      out.write("        <input type=\"text\" hidden=\"\" id=\"txtTipo\"\n");
+      out.write("               value=\"");
+      out.print( (request.getAttribute("stTipo"));
+      out.write("\"/>\n");
+      out.write("        <script>\n");
+      out.write("            var mensaje = document.getElementById(\"txtMensaje\").value;\n");
+      out.write("            var tipo    = document.getElementById(\"txtTipo\").value;\n");
+      out.write("            swal(\"Mensaje\",mensaje,tipo);\n");
+      out.write("            \n");
+      out.write("        </script>\n");
+      out.write("        ");
+
+            }
+        
+      out.write("\n");
       out.write("        <div id=\"layoutAuthentication\">\n");
       out.write("            <div id=\"layoutAuthentication_content\">\n");
       out.write("                <main>\n");
@@ -69,7 +113,7 @@ public final class RegistroMascotas_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                <div class=\"card shadow-lg border-0 rounded-lg mt-5\">\n");
       out.write("                                    <div class=\"card-header\"><h1 class=\"text-center font-weight-light my-4\">Registrar Mascota</h1></div>\n");
       out.write("                                    <div class=\"card-body\">\n");
-      out.write("                                        <form>\n");
+      out.write("                                        <form action=\"RegistroMascotaController\" method=\"POST\">\n");
       out.write("                                            <div class=\"form-row\">\n");
       out.write("                                                <div class=\"col-md-6\">\n");
       out.write("                                                    <div class=\"form-group\">\n");

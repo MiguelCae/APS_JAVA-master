@@ -4,6 +4,8 @@
     Author     : MIGUEL
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,9 +23,38 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <title>Login APS</title>
-        
+
     </head>
     <body class="bg-dark">
+
+        <%
+            List<Models.clsRegistroMascotas> lstclsRegistroMascotas
+                    = new ArrayList<Models.clsRegistroMascotas>();
+
+            //Exiatencia de variable de session
+            if (session.getAttribute("session_lstclsRegistroMascotases") != null) {
+
+                //Casteo de la valiable con el objeto List(tipo de dato variable de sesion)
+                lstclsRegistroMascotas = (List<Models.clsRegistroMascotas>) session.getAttribute("session_lstclsRegistroMascotases");
+            }
+            
+            if (request.getAttribute("stMensaje") != null
+                    && request.getAttribute("stTipo") != null) {
+
+        %>
+        <input type="text" hidden="" id="txtMensaje"
+               value="<%= (request.getAttribute("stMensaje")%>"/>
+        <input type="text" hidden="" id="txtTipo"
+               value="<%= (request.getAttribute("stTipo")%>"/>
+        <script>
+            var mensaje = document.getElementById("txtMensaje").value;
+            var tipo    = document.getElementById("txtTipo").value;
+            swal("Mensaje",mensaje,tipo);
+            
+        </script>
+        <%
+            }
+        %>
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
